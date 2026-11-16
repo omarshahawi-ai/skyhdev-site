@@ -128,3 +128,20 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--navy); outline-of
 .skip:focus { top: 12px; }
 
 @media (max-width: 700px) { .logo { font-size: .95rem; letter-spacing: 1.5px; } }
+
+/* Milestones timeline */
+.timeline { list-style: none; margin: 8px 0 0; padding: 0 0 0 28px; position: relative; max-width: 68ch; }
+.timeline::before { content: ""; position: absolute; left: 6px; top: 10px; bottom: 10px; width: 2px; background: var(--gold); }
+.timeline li { position: relative; display: grid; grid-template-columns: 4.5rem 1fr; gap: 12px; align-items: baseline; margin-bottom: 14px; }
+.timeline li::before { content: ""; position: absolute; left: -28px; top: .55em; width: 14px; height: 14px; border-radius: 50%; background: var(--cream); border: 3px solid var(--gold); }
+.timeline .yr { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.25rem; color: var(--navy); }
+
+/* Ein Hills photo grid: 5 photos fill two rows evenly; photos are links */
+.gallery a { display: block; line-height: 0; border-radius: 4px; }
+.gallery a img { width: 100%; height: auto; }
+@media (min-width: 900px) {
+  #photos .gallery { grid-template-columns: repeat(3, 1fr); }
+  #photos .gallery a:first-child { grid-column: span 2; }
+  #photos .gallery a:first-child img { aspect-ratio: 8 / 3; }
+}
+#photos .note { margin-top: 0; margin-bottom: 12px; }
