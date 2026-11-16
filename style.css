@@ -126,3 +126,5 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--navy); outline-of
 .top a:focus-visible, footer a:focus-visible { outline-color: var(--gold); }
 .skip { position: absolute; left: 12px; top: -60px; z-index: 30; padding: 10px 16px; background: var(--gold); color: var(--navy); font-weight: 600; border-radius: 4px; }
 .skip:focus { top: 12px; }
+
+@media (max-width: 700px) { .logo { font-size: .95rem; letter-spacing: 1.5px; } }
